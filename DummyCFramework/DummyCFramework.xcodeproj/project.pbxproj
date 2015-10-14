@@ -10,7 +10,6 @@
 		CD8793971BCE64BD0056D466 /* DummyCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8793961BCE64BD0056D466 /* DummyCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD8793A01BCE64FB0056D466 /* Dummy-Initializer.c in Sources */ = {isa = PBXBuildFile; fileRef = CD87939E1BCE64FB0056D466 /* Dummy-Initializer.c */; settings = {ASSET_TAGS = (); }; };
 		CD8793A11BCE64FB0056D466 /* Dummy-Initializer.h in Headers */ = {isa = PBXBuildFile; fileRef = CD87939F1BCE64FB0056D466 /* Dummy-Initializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD8793A31BCE66950056D466 /* DummyImplemenationFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8793A21BCE66950056D466 /* DummyImplemenationFile.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +18,6 @@
 		CD8793981BCE64BD0056D466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD87939E1BCE64FB0056D466 /* Dummy-Initializer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "Dummy-Initializer.c"; sourceTree = "<group>"; };
 		CD87939F1BCE64FB0056D466 /* Dummy-Initializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dummy-Initializer.h"; sourceTree = "<group>"; };
-		CD8793A21BCE66950056D466 /* DummyImplemenationFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyImplemenationFile.m; sourceTree = "<group>"; };
 		CD8793A41BCE66ED0056D466 /* DummyCFramework.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = DummyCFramework.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +55,6 @@
 				CD87939F1BCE64FB0056D466 /* Dummy-Initializer.h */,
 				CD8793A41BCE66ED0056D466 /* DummyCFramework.modulemap */,
 				CD87939E1BCE64FB0056D466 /* Dummy-Initializer.c */,
-				CD8793A21BCE66950056D466 /* DummyImplemenationFile.m */,
 				CD8793981BCE64BD0056D466 /* Info.plist */,
 			);
 			path = DummyCFramework;
@@ -143,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8793A01BCE64FB0056D466 /* Dummy-Initializer.c in Sources */,
-				CD8793A31BCE66950056D466 /* DummyImplemenationFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
