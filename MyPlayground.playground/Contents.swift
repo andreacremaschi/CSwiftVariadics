@@ -5,15 +5,15 @@ import DummyCFramework
 typealias GEOSCallbackFunction = @convention(c) (UnsafeMutablePointer<CChar>) -> Void
 
 let swiftCallback : GEOSCallbackFunction = { args in
-    let firstArg:UnsafeMutablePointer<CChar> = unsafeBitCast(args, UnsafeMutablePointer<CChar>.self)
-    let secondArg:UnsafeMutablePointer<CChar> = unsafeBitCast(args + Int(strlen(firstArg)) + 1, UnsafeMutablePointer<CChar>.self)
-    
-    if let string1 = String.fromCString(firstArg),
-        let string2 = String.fromCString(secondArg)
-    {
-        let string = String(format: string1, secondArg)
-        print("GEOSwift # " + string + ".")
+    let firstArg = unsafeBitCast(args, UnsafeMutablePointer<CChar>.self)
+    var argPointer = firstArg
+    var args = [CVarArgType]()
+    while (argPointer.memory != 0) {
+        argPointer = unsafeBitCast(argPointer + Int(strlen(argPointer)) + 1, UnsafeMutablePointer<CChar>.self)
+        args.append( argPointer )
     }
+    let string = String(format: String.fromCString(firstArg)!, arguments: args)
+    print("Message: " + string + ".")
 }
 
 initCAPI(unsafeBitCast(swiftCallback, GEOSMessageHandler.self))
