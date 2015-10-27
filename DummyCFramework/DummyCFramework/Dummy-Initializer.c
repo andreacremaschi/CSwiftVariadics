@@ -15,5 +15,5 @@ void initCAPI(GEOSMessageHandler notice_function) {
 }
 
 void triggerCallback() {
-    nf("%s", "You're awesome!");
+    nf("%s (%lu)", "You're awesome!", 3);
 }
